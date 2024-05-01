@@ -1,38 +1,54 @@
-# create-svelte
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# My Whisper App
 
-## Creating a project
+This repository contains the code for a text-to-speech application built with SvelteKit and OpenAI's Whisper model. The application allows users to input text, which is then converted to natural-sounding speech using the Whisper model.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Installation
+
+Clone the repository to your local machine:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+git clone https://github.com/break-the-build/my-whisper-app.git
+cd my-whisper-app
 ```
 
-## Developing
+Install the necessary packages:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```bash
+npm install
+```
+
+### Setting Up Environment Variables
+
+Create a `.env` file in the root of your project and add your OpenAI API key:
+
+```plaintext
+OPENAI_API_KEY=your_openai_api_token_here
+```
+
+### Running the Application
+
+To run the application in development mode, execute:
 
 ```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Navigate to `http://localhost:5173` to see the application in action.
 
-To create a production version of your app:
+## Usage
 
-```bash
-npm run build
-```
+The application features a simple UI where you can enter text into a textarea and submit it to be converted to speech. The resulting audio will be playable directly on the page.
 
-You can preview the production build with `npm run preview`.
+## Built With
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+- [SvelteKit](https://kit.svelte.dev/) - The framework used
+- [OpenAI Whisper](https://openai.com/research/whisper) - Speech synthesis model
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
